@@ -16,3 +16,8 @@ end
 gem 'jquery-rails'
 gem 'jbuilder'
 gem 'rails-backbone'
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'tconsole'
+end
