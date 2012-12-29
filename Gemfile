@@ -16,6 +16,7 @@ end
 gem 'jquery-rails'
 gem 'jbuilder'
 gem 'rails-backbone'
+gem 'strong_parameters'
 
 group :test do
   gem 'factory_girl_rails'

@@ -1,3 +1,3 @@
 class Task < ActiveRecord::Base
-  attr_accessible :content
+  include ActiveModel::ForbiddenAttributesProtection
 end
