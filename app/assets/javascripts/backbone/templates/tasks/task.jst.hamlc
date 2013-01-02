@@ -1,7 +1,4 @@
-%td= @content
-%td
-  %a{:href => "#/#{@id}"} Show
-%td
-  %a{:href => "#/#{@id}/edit"} Edit
-%td
-  %a.destroy{:href => "#/#{@id}/destroy"} Destroy
+%li
+  %span.content= @content
+  %a.edit{href: '#'} Edit
+  %a.destroy{href: '#'} Destroy

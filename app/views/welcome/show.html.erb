@@ -2,7 +2,10 @@
 
 <script type="text/javascript">
     $(function() {
-        window.router = new TodoBackbone.Routers.TasksRouter({tasks: <%= @tasks.to_json.html_safe -%>});
-        Backbone.history.start();
+        var tasks = new TodoBackbone.Collections.TasksCollection();
+        tasks.reset(<%= @tasks.to_json.html_safe -%>);
+
+        view = new TodoBackbone.Views.Tasks.IndexView({collection: tasks});
+        $("#tasks").html(view.render().el);
     });
 </script>
