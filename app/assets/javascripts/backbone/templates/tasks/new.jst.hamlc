@@ -1,8 +1,3 @@
-%h1 New task
 %form#new-task{:name => "task"}
-  .field
-    %label{:for => "content"} content:
-    %input#content{:name => "content", :type => "text", :value => @content}
-  .actions
-    %input{:type => "submit", :value => "Create Task"}
-%a{:href => "#/index"} Back
+  %input#content{:name => "content", :type => "text", :value => @content}
+  %input{:type => "submit", :value => "Create Task"}
