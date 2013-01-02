@@ -1,0 +1,8 @@
+%h1 Edit task
+%form#edit-task{:name => "task"}
+  .field
+    %label{:for => "content"} content:
+    %input#content{:name => "content", :type => "text", :value => @content}
+  .actions
+    %input{:type => "submit", :value => "Update Task"}
+%a{:href => "#/index"} Back

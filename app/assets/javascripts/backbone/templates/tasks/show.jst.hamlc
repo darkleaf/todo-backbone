@@ -1,0 +1,4 @@
+%p
+  %b Content:
+  = @content
+%a{:href => "#/index"} Back
