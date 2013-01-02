@@ -7,6 +7,7 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
+  gem 'haml_coffee_assets'
 
   gem 'therubyracer', :platform => :ruby
   gem 'libv8'
