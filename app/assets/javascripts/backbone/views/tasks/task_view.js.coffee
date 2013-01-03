@@ -10,6 +10,7 @@ class TodoBackbone.Views.Tasks.TaskView extends Backbone.View
   tagName: "li"
 
   edit: ->
+    this.trigger('edit-click', @model, @$el)
     return false
 
   destroy: () ->

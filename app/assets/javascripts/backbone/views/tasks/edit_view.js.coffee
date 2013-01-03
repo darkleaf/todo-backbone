@@ -6,15 +6,16 @@ class TodoBackbone.Views.Tasks.EditView extends Backbone.View
   events:
     "submit #edit-task": "update"
 
+  tagName: "li"
+
   update: (e) ->
     e.preventDefault()
     e.stopPropagation()
 
-    @model.save(null,
+    @model.save null,
       success: (task) =>
         @model = task
-        window.location.hash = "/#{@model.id}"
-    )
+        this.trigger('updated', @model, @$el)
 
   render: ->
     @$el.html(@template(@model.toJSON() ))

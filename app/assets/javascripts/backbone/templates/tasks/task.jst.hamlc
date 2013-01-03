@@ -1,4 +1,3 @@
-%li
-  %span.content= @content
-  %a.edit{href: '#'} Edit
-  %a.destroy{href: '#'} Destroy
+%span.content= @content
+%a.edit{href: '#'} Edit
+%a.destroy{href: '#'} Destroy
