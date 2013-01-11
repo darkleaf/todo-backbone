@@ -14,21 +14,8 @@ class TodoBackbone.Views.Tasks.IndexView extends Backbone.View
     @collection.each @addOne
 
   addOne: (task) =>
-    view = @taskView task
-    @$('ul').append(view.render().el)
-
-  taskView: (task) =>
     view = new TodoBackbone.Views.Tasks.TaskView model : task
-    view.on 'edit-click', @drawEditForm
-
-  drawEditForm: (task, el) =>
-    view = new TodoBackbone.Views.Tasks.EditView model: task
-    view.on 'updated', @drawTask
-    el.replaceWith(view.render().el)
-
-  drawTask: (task, el) =>
-    view = @taskView task
-    el.replaceWith view.render().el
+    @$('ul').append(view.render().el)
 
   drawNewForm: ->
     view = new TodoBackbone.Views.Tasks.NewView collection: @collection
